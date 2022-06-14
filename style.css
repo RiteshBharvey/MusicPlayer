@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+.brand {
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.container {
+    min-height: 72vh;
+    width: 75%;
+    background-color: black;
+    display: flex;
+    margin: 23px auto;
+    padding: 34px;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Varela', sans-serif;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* .songList {
+    display: flex;
+    flex-direction: column;
+} */
+
+.songItems {
+    height: 48px;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 60vmin;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.songListPlay {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.songListPlay li {
+    size: 2.5em;
+}
+
+.timeSpan {
+    margin: 0 10px;
+}
+
+.songItems img {
+    height: 2.9rem;
+    width: 2.9rem;
+    border-radius: 50%;
+    border: none;
+    margin-left: 0.5rem;
+}
+
+.playItemsSong {
+    cursor: pointer;
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 12px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#progressBar {
+    width: 80vw;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    top: 48px;
+    font-family: 'Varela', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 98%;
+        display: block;
+    }
+    .songItems {
+        width: 100%;
+    }
+    .songInfo {
+        left: 1vw;
+    }
+}
