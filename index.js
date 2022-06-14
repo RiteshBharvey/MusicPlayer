@@ -1,7 +1,7 @@
 console.log('Spotify Clone');
 
 let songIndex = 0;
-let audioElement = new Audio("songs/1.mp3");
+let audioElement = new Audio("1.mp3");
 let masterPlay = document.getElementById("masterPlay");
 let gif = document.getElementById("gif");
 let myProgressBar = document.getElementById("progressBar");
@@ -9,16 +9,16 @@ let songItems = Array.from(document.getElementsByClassName("songItems"));
 let masterSongName = document.getElementById("masterSongName");
 
 let songs = [
-    { songName: "Salame Ishq1", filePath: "songs/1.mp3", songCover: "covers/1.jpg" },
-    { songName: "Salame Ishq2", filePath: "songs/2.mp3", songCover: "covers/2.jpg" },
-    { songName: "Salame Ishq3", filePath: "songs/3.mp3", songCover: "covers/3.jpg" },
-    { songName: "Salame Ishq4", filePath: "songs/4.mp3", songCover: "covers/4.jpg" },
-    { songName: "Salame Ishq5", filePath: "songs/5.mp3", songCover: "covers/5.jpg" },
-    { songName: "Salame Ishq6", filePath: "songs/5.mp3", songCover: "covers/6.jpg" },
-    { songName: "Salame Ishq7", filePath: "songs/7.mp3", songCover: "covers/7.jpg" },
-    { songName: "Salame Ishq8", filePath: "songs/8.mp3", songCover: "covers/8.jpg" },
-    { songName: "Salame Ishq9", filePath: "songs/9.mp3", songCover: "covers/9.jpg" },
-    { songName: "Salame Ishq10", filePath: "songs/10.mp3", songCover: "covers/10.jpg" }
+    { songName: "Salame Ishq1", filePath: "1.mp3", songCover: "1.jpg" },
+    { songName: "Salame Ishq2", filePath: "2.mp3", songCover: "2.jpg" },
+    { songName: "Salame Ishq3", filePath: "3.mp3", songCover: "3.jpg" },
+    { songName: "Salame Ishq4", filePath: "4.mp3", songCover: "4.jpg" },
+    { songName: "Salame Ishq5", filePath: "5.mp3", songCover: "5.jpg" },
+    { songName: "Salame Ishq6", filePath: "5.mp3", songCover: "6.jpg" },
+    { songName: "Salame Ishq7", filePath: "7.mp3", songCover: "7.jpg" },
+    { songName: "Salame Ishq8", filePath: "8.mp3", songCover: "8.jpg" },
+    { songName: "Salame Ishq9", filePath: "9.mp3", songCover: "9.jpg" },
+    { songName: "Salame Ishq10", filePath: "10.mp3", songCover: "10.jpg" }
 ];
 
 songItems.forEach((element, i) => {
@@ -97,7 +97,7 @@ Array.from(document.getElementsByClassName("playItemsSong")).forEach((element) =
         e.target.classList.remove("fa-circle-play");
         e.target.classList.add("fa-circle-pause");
 
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `${songIndex+1}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity = 1;
@@ -119,7 +119,7 @@ document.getElementById("next").addEventListener("click", () => {
     } else {
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-circle-play');
@@ -139,7 +139,7 @@ document.getElementById("previous").addEventListener("click", () => {
     } else {
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-circle-play');
