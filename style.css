@@ -148,4 +148,7 @@ nav ul li {
     .songInfo {
         left: 1vw;
     }
+    #masterSongName {
+        font-size: 0.6rem;
+    }
 }
